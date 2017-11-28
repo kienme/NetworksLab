@@ -52,5 +52,12 @@ int main()
 			cout << j+1 << "\t\t" << nodes[i].from[j]+1 << "\t\t" << nodes[i].dist[j] << "\n";
 	}
 
+	int src, dest;
+	cout << "\nEnter source and destination: ";
+	cin >> src >> dest;
+	--src; --dest;
+
+	cout << "Shortest path of cost " << nodes[src].dist[dest] << " via node " << nodes[src].from[dest]+1 << endl;
+
 	return 0;
 }
